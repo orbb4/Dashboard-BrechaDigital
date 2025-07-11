@@ -1,5 +1,5 @@
 import pandas as pd
-year = 2018
+year=2018
 # para mapear el dataset de poblacion
 regiones = {
     "1.": None,
@@ -39,6 +39,10 @@ regiones_romano = {
     "XV": 15,
     "XVI": 16
 }
+
+def set_year(n):
+    global year
+    year = n
 
 def limpiar_y_mapear_regiones(df, diccionario_regiones):
     df = df.copy()
