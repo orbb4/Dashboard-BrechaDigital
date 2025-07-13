@@ -1,6 +1,7 @@
 import pandas as pd
-year=2018
+year=2024
 # para mapear el dataset de poblacion
+regiones_list=[15, 1, 2, 3, 4, 5, 13, 6, 7, 16, 8, 9, 14, 10, 11, 12]
 regiones = {
     "1.": None,
     "1.1.": 15,  # Región de Arica y Parinacota
@@ -21,6 +22,7 @@ regiones = {
     "1.16.": 12  # Región de Magallanes y la Antártica Chilena
 }
 
+#nose
 regiones_romano = {
     "I": 1,
     "II": 2,
@@ -79,3 +81,21 @@ def get_df_internet():
     df_conex = df_conex[["COD_REG_RBD", "NUM_CONEXIONES_FIJAS"]]
     return df_conex
 
+def get_df_viviendas():
+    df_vivi = pd.read_excel("Dataset\\CensosVivienda200220172024.xlsx", sheet_name="Total Viviendas", skiprows=5)
+    df_vivi = df_vivi.drop(columns=["Comuna", "Código Comuna INE", "Viviendas Particulares", "Viviendas Colectivas", "Viviendas Particulares Ocupadas con Moradores Presentes"])
+
+    df_vivi = pd.concat([
+        df_vivi.iloc[3:19]
+    ])
+    # renames raros para arreglar el problema del doble header
+    df_vivi = df_vivi.rename(columns={"Total Viviendas": "2002"})
+    df_vivi = df_vivi.rename(columns={"Unnamed: 4": "2007"})
+    df_vivi = df_vivi.rename(columns={"Unnamed: 5": "2024"})
+    df_vivi = df_vivi.reset_index().rename(columns={'index': 'COD_REG_RBD'})
+    df_vivi["COD_REG_RBD"]=regiones_list
+    columnas_utiles = ["COD_REG_RBD", str(year)]
+    df_vivi = df_vivi[columnas_utiles]
+    df_vivi = df_vivi.reset_index().rename(columns={str(year): 'VIVIENDAS'})
+    
+    return df_vivi

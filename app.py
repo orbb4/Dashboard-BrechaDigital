@@ -1,34 +1,43 @@
 from dash import Dash, dcc, html, dash, Output, Input, callback
 from figuras.bbplot import make_bbplot
 from figuras.rankingbars import make_bchart
-from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, set_year
+from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, get_df_viviendas, set_year
 import pandas as pd
+
 def get_df():
     df_pop = get_df_pop()
     df_rend = get_df_rendimiento()
     df_inter = get_df_internet()
+    df_vivi = get_df_viviendas()
     df_merged = df_rend.merge(df_pop, on="COD_REG_RBD")
     df_merged = df_merged.merge(df_inter, on="COD_REG_RBD")
-    df_merged["CONEXIONES_POR_HABITANTE"] = (df_merged["NUM_CONEXIONES_FIJAS"] / df_merged["POP"]) *100
+    df_merged = df_merged.merge(df_vivi, on="COD_REG_RBD")
+    #para revisar el df en caso de necesitar debug
+    #df_merged.to_excel("soytesting.xlsx")
+    df_merged["CONEXIONES_POR_VIVIENDA"] = (df_merged["NUM_CONEXIONES_FIJAS"] / df_merged["VIVIENDAS"]) *100
     return df_merged
+
+
 df = get_df()
 fig_bubble = make_bbplot(df)
-fig_bars = make_bchart(df, 10)
-#print(df_pop)
-#print(df_rend)
+fig_bars = make_bchart(df)
 app = Dash(__name__)
 app.layout = html.Div([
     html.H1("Dashboard Brecha Digital"),
-        dcc.Slider(
+    dcc.Dropdown(
         id='year-slider',
-        min=2002,
-        max=2025,
-        step=1,
-        marks={str(year): str(year) for year in range(2002, 2025)},
-        value=2018
+        options=[
+            {'label': '2002', 'value': 2002},
+            {'label': '2007', 'value': 2007},
+            {'label': '2024', 'value': 2024},
+        ],
+        value=2024,
+        clearable=False,
     ),
-    dcc.Graph(figure=fig_bubble, id="bbplot"),
-    dcc.Graph(figure=fig_bars, id="barchart")
+    html.Div([
+    html.Div([dcc.Graph(figure=fig_bubble, id="bbplot")], style={"flex":"3"}),
+    html.Div([dcc.Graph(figure=fig_bars, id="barchart")], style={"flex":"1"})    
+    ], style={"display": "flex"})
 ])
 #ToDo: cargar todos los años de antemano (añadir AÑO al dataframe) para evitar lag
 # eso y da algunos errores al moverse en el slider jeje
