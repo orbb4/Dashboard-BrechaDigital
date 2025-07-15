@@ -125,3 +125,16 @@ def get_df_viviendas():
         df_vivi = df_vivi.reset_index().rename(columns={str(year): 'VIVIENDAS'})
         
     return df_vivi
+
+
+def get_df_prueba():
+    if year >= 2024:
+        df_prueba = pd.read_csv("Dataset\\Promedio Admisión PAES\\PromedioPorRegion"+str(year)+".csv")
+    elif year == 2023:
+        df_prueba = pd.read_csv("Dataset\\Promedio Admisión 2023\\PromedioPorRegion"+str(year)+".csv")
+    elif year==2021 or year==2022:
+        df_prueba = pd.read_csv("Dataset\\Promedios Admisión PDT\\PromedioPorRegion"+str(year)+".csv")
+    else:
+        df_prueba = pd.read_csv("Dataset\\Promedios Admisión PSU\\PromedioPorRegion"+str(year)+".csv")
+    df_prueba = df_prueba.rename(columns={"CODIGO_REGION": 'COD_REG_RBD'})
+    return df_prueba
