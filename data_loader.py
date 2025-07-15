@@ -1,6 +1,7 @@
 import pandas as pd
-year = 2018
+year=2024
 # para mapear el dataset de poblacion
+regiones_list=[15, 1, 2, 3, 4, 5, 13, 6, 7, 16, 8, 9, 14, 10, 11, 12]
 regiones = {
     "1.": None,
     "1.1.": 15,  # Región de Arica y Parinacota
@@ -21,6 +22,7 @@ regiones = {
     "1.16.": 12  # Región de Magallanes y la Antártica Chilena
 }
 
+#nose
 regiones_romano = {
     "I": 1,
     "II": 2,
@@ -39,6 +41,26 @@ regiones_romano = {
     "XV": 15,
     "XVI": 16
 }
+
+regiones_romano_2002 = {
+    "I": 1,
+    "II": 2,
+    "III": 3,
+    "IV": 4,
+    "V": 5,
+    "VI": 6,
+    "VII": 7,
+    "VIII": 8,
+    "IX": 9,
+    "X": 10,
+    "XI": 11,
+    "XII": 12,
+    "RM": 13,
+}
+
+def set_year(n):
+    global year
+    year = n
 
 def limpiar_y_mapear_regiones(df, diccionario_regiones):
     df = df.copy()
@@ -62,12 +84,19 @@ def get_df_rendimiento():
     df_rendimiento = pd.read_csv("Dataset\\rendimiento\\"+str(year)+".csv", sep=',', encoding='latin1', decimal='.')
     return df_rendimiento
 def get_df_internet():
-    df_inter = pd.read_excel("Dataset\\CONEXIONES_INTERNET_FIJA.xlsx", sheet_name="7.4.Co_RG", skiprows=16)
+    if year != 2002:
+        df_inter = pd.read_excel("Dataset\\CONEXIONES_INTERNET_FIJA.xlsx", sheet_name="7.4.Co_RG", skiprows=16)
+    else:
+        df_inter = pd.read_excel("Dataset\\CONEXIONES_INTERNET_FIJA.xlsx", sheet_name="7.4.Co_RG", skiprows=6, nrows=8)
     # el excel no tiene cada fila con un año asociado... 
     df_inter["Año"] = df_inter["Año"].ffill()
     df_inter_year = df_inter[(df_inter["Año"] == year) & (df_inter["Mes"] == "Dic")]
-    df_conex = df_inter_year[list(regiones_romano.keys())].T
-
+    if df_inter_year.empty:
+        raise ValueError(f"No hay datos para el año {year}. oops")
+    if year != 2002:
+        df_conex = df_inter_year[list(regiones_romano.keys())].T
+    else:
+        df_conex = df_inter_year[list(regiones_romano_2002.keys())].T
     df_conex.reset_index(inplace=True)
     df_conex.columns = ["ROMANO", "NUM_CONEXIONES_FIJAS"]
     df_conex["COD_REG_RBD"] = df_conex["ROMANO"].map(regiones_romano)
@@ -75,3 +104,21 @@ def get_df_internet():
     df_conex = df_conex[["COD_REG_RBD", "NUM_CONEXIONES_FIJAS"]]
     return df_conex
 
+def get_df_viviendas():
+    df_vivi = pd.read_excel("Dataset\\CensosVivienda200220172024.xlsx", sheet_name="Total Viviendas", skiprows=5)
+    df_vivi = df_vivi.drop(columns=["Comuna", "Código Comuna INE", "Viviendas Particulares", "Viviendas Colectivas", "Viviendas Particulares Ocupadas con Moradores Presentes"])
+
+    df_vivi = pd.concat([
+        df_vivi.iloc[3:19]
+    ])
+    # renames raros para arreglar el problema del doble header
+    df_vivi = df_vivi.rename(columns={"Total Viviendas": "2002"})
+    df_vivi = df_vivi.rename(columns={"Unnamed: 4": "2007"})
+    df_vivi = df_vivi.rename(columns={"Unnamed: 5": "2024"})
+    df_vivi = df_vivi.reset_index().rename(columns={'index': 'COD_REG_RBD'})
+    df_vivi["COD_REG_RBD"]=regiones_list
+    columnas_utiles = ["COD_REG_RBD", str(year)]
+    df_vivi = df_vivi[columnas_utiles]
+    df_vivi = df_vivi.reset_index().rename(columns={str(year): 'VIVIENDAS'})
+    
+    return df_vivi
