@@ -42,7 +42,6 @@ regiones_romano = {
     "XVI": 16
 }
 
-<<<<<<< HEAD
 regiones_romano_2002 = {
     "I": 1,
     "II": 2,
@@ -59,8 +58,6 @@ regiones_romano_2002 = {
     "RM": 13,
 }
 
-=======
->>>>>>> aa7fb360da3c420dc2349ecb8df542a8a9817e83
 def set_year(n):
     global year
     year = n
@@ -108,20 +105,23 @@ def get_df_internet():
     return df_conex
 
 def get_df_viviendas():
-    df_vivi = pd.read_excel("Dataset\\CensosVivienda200220172024.xlsx", sheet_name="Total Viviendas", skiprows=5)
-    df_vivi = df_vivi.drop(columns=["Comuna", "Código Comuna INE", "Viviendas Particulares", "Viviendas Colectivas", "Viviendas Particulares Ocupadas con Moradores Presentes"])
+    if year==2017:
+        df_vivi = pd.read_csv("Dataset\\Censo2017-Viviendas-Filtrado.csv")
+    else:
+        df_vivi = pd.read_excel("Dataset\\CensosVivienda200220172024.xlsx", sheet_name="Total Viviendas", skiprows=5)
+        df_vivi = df_vivi.drop(columns=["Comuna", "Código Comuna INE", "Viviendas Particulares", "Viviendas Colectivas", "Viviendas Particulares Ocupadas con Moradores Presentes"])
 
-    df_vivi = pd.concat([
-        df_vivi.iloc[3:19]
-    ])
-    # renames raros para arreglar el problema del doble header
-    df_vivi = df_vivi.rename(columns={"Total Viviendas": "2002"})
-    df_vivi = df_vivi.rename(columns={"Unnamed: 4": "2007"})
-    df_vivi = df_vivi.rename(columns={"Unnamed: 5": "2024"})
-    df_vivi = df_vivi.reset_index().rename(columns={'index': 'COD_REG_RBD'})
-    df_vivi["COD_REG_RBD"]=regiones_list
-    columnas_utiles = ["COD_REG_RBD", str(year)]
-    df_vivi = df_vivi[columnas_utiles]
-    df_vivi = df_vivi.reset_index().rename(columns={str(year): 'VIVIENDAS'})
-    
+        df_vivi = pd.concat([
+            df_vivi.iloc[3:19]
+        ])
+        # renames raros para arreglar el problema del doble header
+        df_vivi = df_vivi.rename(columns={"Total Viviendas": "2002"})
+        df_vivi = df_vivi.rename(columns={"Unnamed: 4": "2007"})
+        df_vivi = df_vivi.rename(columns={"Unnamed: 5": "2024"})
+        df_vivi = df_vivi.reset_index().rename(columns={'index': 'COD_REG_RBD'})
+        df_vivi["COD_REG_RBD"]=regiones_list
+        columnas_utiles = ["COD_REG_RBD", str(year)]
+        df_vivi = df_vivi[columnas_utiles]
+        df_vivi = df_vivi.reset_index().rename(columns={str(year): 'VIVIENDAS'})
+        
     return df_vivi

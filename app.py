@@ -9,6 +9,7 @@ def get_df():
     df_rend = get_df_rendimiento()
     df_inter = get_df_internet()
     df_vivi = get_df_viviendas()
+    print(repr(df_pop.columns[1]))
     df_merged = df_rend.merge(df_pop, on="COD_REG_RBD")
     df_merged = df_merged.merge(df_inter, on="COD_REG_RBD")
     df_merged = df_merged.merge(df_vivi, on="COD_REG_RBD")
@@ -24,27 +25,22 @@ fig_bars = make_bchart(df)
 app = Dash(__name__)
 app.layout = html.Div([
     html.H1("Dashboard Brecha Digital"),
-    dcc.Dropdown(
+    dcc.Slider(
         id='year-slider',
-        options=[
-            {'label': '2002', 'value': 2002},
-            {'label': '2007', 'value': 2007},
-            {'label': '2024', 'value': 2024},
-        ],
+        marks={
+            2002: '2002',
+            2007: '2007',
+            2017: '2017',
+            2024: '2024'
+        },
         value=2024,
-        clearable=False,
+        step=None
     ),
     html.Div([
     html.Div([dcc.Graph(figure=fig_bubble, id="bbplot")], style={"flex":"3"}),
     html.Div([dcc.Graph(figure=fig_bars, id="barchart")], style={"flex":"1"})    
     ], style={"display": "flex"})
 ])
-<<<<<<< HEAD
-
-=======
-#ToDo: cargar todos los años de antemano (añadir AÑO al dataframe) para evitar lag
-# eso y da algunos errores al moverse en el slider jeje
->>>>>>> aa7fb360da3c420dc2349ecb8df542a8a9817e83
 @callback(
     Output('bbplot', 'figure'),
     Input('year-slider', 'value'))
