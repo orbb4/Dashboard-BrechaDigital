@@ -42,6 +42,7 @@ regiones_romano = {
     "XVI": 16
 }
 
+<<<<<<< HEAD
 regiones_romano_2002 = {
     "I": 1,
     "II": 2,
@@ -58,6 +59,8 @@ regiones_romano_2002 = {
     "RM": 13,
 }
 
+=======
+>>>>>>> aa7fb360da3c420dc2349ecb8df542a8a9817e83
 def set_year(n):
     global year
     year = n

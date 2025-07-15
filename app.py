@@ -39,7 +39,12 @@ app.layout = html.Div([
     html.Div([dcc.Graph(figure=fig_bars, id="barchart")], style={"flex":"1"})    
     ], style={"display": "flex"})
 ])
+<<<<<<< HEAD
 
+=======
+#ToDo: cargar todos los años de antemano (añadir AÑO al dataframe) para evitar lag
+# eso y da algunos errores al moverse en el slider jeje
+>>>>>>> aa7fb360da3c420dc2349ecb8df542a8a9817e83
 @callback(
     Output('bbplot', 'figure'),
     Input('year-slider', 'value'))
