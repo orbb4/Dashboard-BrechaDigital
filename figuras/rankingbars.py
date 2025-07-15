@@ -9,7 +9,7 @@ def make_bchart(df, top_n=5):
         x="PROM_GRAL",
         y="COD_REG_RBD",
         labels={"PROM_GRAL": "Promedio Académico", "COD_REG_RBD": "Región"},
-        title="Regiones por mejor promedio académico",
+        title="Mejores puntajes por región",
         orientation="h"
     )
     fig.update_layout(

@@ -19,6 +19,9 @@ def get_df():
 
 
 current_prueba = "MATE1_REG_ACTUAL"
+pruebas_paes=['M1', 'M2', 'HISTORIA', 'LENGUAJE', 'CIENCIAS']
+pruebas_psuptu=['MATEMATICA', 'HISTORIA', 'LENGUAJE', 'CIENCIAS']
+pruebas = pruebas_paes
 df = get_df()
 fig_bubble = make_bbplot(df, current_prueba)
 fig_bars = make_bchart(df)
@@ -29,7 +32,6 @@ app.layout = html.Div([
         dcc.Slider(
             id='year-slider',
             marks={
-                2002: '2002',
                 2007: '2007',
                 2017: '2017',
                 2024: '2024'
@@ -39,7 +41,7 @@ app.layout = html.Div([
         ),
         html.Div([
             html.Div([
-                dcc.Dropdown(['M1', 'M2', 'HISTORIA', 'LENGUAJE', 'CIENCIAS'], value='M1', id='prueba-dropdown'),
+                dcc.Dropdown(pruebas, value='M1', id='prueba-dropdown'),
                 dcc.Graph(figure=fig_bubble, id="bbplot", style={"flexGrow": 1})
             ], style={"flexGrow": 1, "flex": 3, "display": "flex", "flexDirection": "column", "minHeight": "0", "padding": "2%"}),
             html.Div([
@@ -57,20 +59,46 @@ app.layout = html.Div([
 def update_bbchart(year, prueba):
     global current_prueba
     set_year(year)
-    if prueba=="M1":
-        current_prueba="MATE1_REG_ACTUAL"
-    elif prueba=="M2":
-        current_prueba="MATE2_REG_ACTUAL"
-    elif prueba=="HISTORIA":
-        current_prueba="HCSOC_REG_ACTUAL"
-    elif prueba=="CIENCIAS":
-        current_prueba="CIEN_REG_ACTUAL"
-    elif prueba=="LENGUAJE":
-        current_prueba="CLEC_REG_ACTUAL"
+    if year>=2024:
+        if prueba=="M1":
+            current_prueba="MATE1_REG_ACTUAL"
+        elif prueba=="M2":
+            current_prueba="MATE2_REG_ACTUAL"
+        elif prueba=="HISTORIA":
+            current_prueba="HCSOC_REG_ACTUAL"
+        elif prueba=="CIENCIAS":
+            current_prueba="CIEN_REG_ACTUAL"
+        elif prueba=="LENGUAJE":
+            current_prueba="CLEC_REG_ACTUAL"
+    else:
+        if prueba=="MATEMATICA":
+            current_prueba="MATE_ACTUAL"
+        elif prueba == "HISTORIA":
+            current_prueba = "HCSO_ACTUAL"
+        elif prueba == "HISTORIA":
+            current_prueba = "HCSO_ACTUAL"
+        elif prueba=="CIENCIAS":
+            current_prueba="CIEN_ACTUAL"
+        elif prueba=="LENGUAJE":
+            current_prueba="LENG_ACTUAL"
     df = get_df()
-    print(df.columns)
-    print(df[current_prueba])
     fig_bbplot =make_bbplot(df, current_prueba, prueba)
     return fig_bbplot
+
+@callback(
+    Output('prueba-dropdown', "options"),
+    Output('prueba-dropdown', "value"),
+    Input("year-slider", "value")
+)
+def update_dropdown(year):
+    default_value = "M1"
+    if year>=2024:
+        pruebas = pruebas_paes
+    else:
+        pruebas=pruebas_psuptu
+        default_value = "MATEMATICA"
+    return pruebas, default_value
+
+
 
 app.run(debug=True)
