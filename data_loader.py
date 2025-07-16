@@ -138,3 +138,17 @@ def get_df_prueba():
         df_prueba = pd.read_csv("Dataset\\Promedios Admisión PSU\\PromedioPorRegion"+str(year)+".csv")
     df_prueba = df_prueba.rename(columns={"CODIGO_REGION": 'COD_REG_RBD'})
     return df_prueba
+
+
+def get_df_pobreza():
+    df = pd.read_excel("Dataset\\PLANILLA_Estimaciones_comunales_tasa_pobreza_por_ingresos_multidimensional_2017.xlsx", skiprows=2)
+    print(df.columns.tolist())
+    df['% pobreza'] = df['Porcentaje de personas en situación de pobreza por ingresos 2017']
+    df_ordenado = df.sort_values('% pobreza')
+    comunas_menos_pobreza = df_ordenado.head(5).reset_index(drop=True)
+    comunas_mas_pobreza = df_ordenado.tail(5).sort_values('% pobreza', ascending=False).reset_index(drop=True)
+    print("Menor pobreza:")
+    print(comunas_menos_pobreza[['Nombre comuna', '% pobreza']])
+    print("\nMayor pobreza:")
+    print(comunas_mas_pobreza[['Nombre comuna', '% pobreza']])
+    return comunas_mas_pobreza, comunas_menos_pobreza

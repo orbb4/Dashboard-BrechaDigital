@@ -1,7 +1,7 @@
 from dash import Dash, dcc, html, dash, Output, Input, callback
 from figuras.bbplot import make_bbplot
 from figuras.rankingbars import make_bchart
-from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, get_df_viviendas, get_df_prueba, set_year
+from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, get_df_viviendas, get_df_prueba, get_df_pobreza, set_year
 import pandas as pd
 
 def get_df():
@@ -51,6 +51,15 @@ app.layout = html.Div([
         ], style={"display": "flex", "height": "70vh", "minHeight": "0"})
     ], style={"backgroundColor": "#ffffff", "padding": "1%", "borderRadius": "10px", "minHeight": "80vh", "margin": "1%"}),
     # fin de la fila
+    html.Div([
+        html.Img(src="/assets/wordcloud.png", style={
+            "display": "block",
+            "marginLeft": "auto",
+            "marginRight": "auto",
+            "maxWidth": "100%",
+            "height": "100%"
+        })
+    ], style={"backgroundColor": "#ffffff", "padding": "1%", "borderRadius": "10px", "minHeight": "40vh", "margin": "1% auto", "maxWidth": "30%", "maxHeigth": "40%"})
 ], style={"backgroundColor": "#e9e9e9"})
 
 @callback(
