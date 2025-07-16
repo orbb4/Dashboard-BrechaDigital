@@ -39,17 +39,31 @@ app.layout = html.Div([
             value=2024,
             step=None
         ),
+        # esto es una fila (2 visualizaciones)
         html.Div([
             html.Div([
                 dcc.Dropdown(pruebas, value='M1', id='prueba-dropdown'),
                 dcc.Graph(figure=fig_bubble, id="bbplot", style={"flexGrow": 1})
-            ], style={"flexGrow": 1, "flex": 3, "display": "flex", "flexDirection": "column", "minHeight": "0", "padding": "2%"}),
+            ], style={"flexGrow": 1, "flex": 2.5, "display": "flex", "flexDirection": "column", "minHeight": "0", "padding": "2%"}),
             html.Div([
                 dcc.Graph(figure=fig_bars, id="barchart", style={"flexGrow": 1})
-            ], style={"display": "flex", "flex":1, "minHeight": "0", "flexDirection": "column", "padding": "2%"})    
+            ], style={"display": "flex", "flex":1.5, "minHeight": "0", "flexDirection": "column", "padding": "2%"})    
         ], style={"display": "flex", "height": "70vh", "minHeight": "0"})
     ], style={"backgroundColor": "#ffffff", "padding": "1%", "borderRadius": "10px", "minHeight": "80vh", "margin": "1%"}),
+    # fin de la fila
 ], style={"backgroundColor": "#e9e9e9"})
+
+@callback(
+    Output('barchart', 'figure'),
+    Input('year-slider', 'value'),
+)
+def update_bars(year):
+    set_year(year)
+    fig = make_bchart(get_df(), year)
+    return fig
+
+
+
 
 @callback(
     Output('bbplot', 'figure'),
@@ -58,8 +72,10 @@ app.layout = html.Div([
 )
 def update_bbchart(year, prueba):
     global current_prueba
+    es_paes = False
     set_year(year)
     if year>=2024:
+        es_paes=True
         if prueba=="M1":
             current_prueba="MATE1_REG_ACTUAL"
         elif prueba=="M2":
@@ -82,7 +98,7 @@ def update_bbchart(year, prueba):
         elif prueba=="LENGUAJE":
             current_prueba="LENG_ACTUAL"
     df = get_df()
-    fig_bbplot =make_bbplot(df, current_prueba, prueba)
+    fig_bbplot =make_bbplot(df, current_prueba, prueba, es_paes)
     return fig_bbplot
 
 @callback(
@@ -98,7 +114,6 @@ def update_dropdown(year):
         pruebas=pruebas_psuptu
         default_value = "MATEMATICA"
     return pruebas, default_value
-
 
 
 app.run(debug=True)
