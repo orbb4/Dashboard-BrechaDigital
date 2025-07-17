@@ -26,6 +26,7 @@ def make_bchart(df, year=2024, top_n=16):
         var_name="TIPO_PRUEBA",
         value_name="PUNTAJE"
     )
+
     df["TIPO_PRUEBA"] = df["TIPO_PRUEBA"].map(nombres_pruebas)
     fig = aux_make_bchart(df, top_n, prueba_admision)
     return fig
@@ -51,8 +52,9 @@ def aux_make_bchart(df, top_n, prueba_admision):
         color="TIPO_PRUEBA",
         color_discrete_map=colors,
         title="Puntajes "+prueba_admision+" promedio por región y tipo de prueba",
-        labels={"PROM_GRAL": "Puntajes promedio", "COD_REG_RBD": "Región"},
+        labels={"TIPO_PRUEBA": "Prueba", "REGION_NOMBRE": "Región", "PUNTAJE": "Puntaje"},
         orientation="h",
+        
     )
     fig.update_layout(
         yaxis=dict(title="Región"),
