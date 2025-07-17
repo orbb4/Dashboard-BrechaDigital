@@ -54,13 +54,13 @@ app.layout = html.Div([
     html.H1(
         "Dashboard Brecha Digital Educativa",
         style={
-            "textAlign": "center",         # Centra el texto
-            "color": "#ffffff",            # Un gris azulado sobrio
-            "fontSize": "36px",            # Tamaño grande
-            "fontFamily": "Segoe UI, sans-serif",  # Fuente más moderna
+            "textAlign": "center",         
+            "color": "#ffffff",           
+            "fontSize": "36px",            
+            "fontFamily": "Segoe UI, sans-serif",  
             "marginTop": "20px",
             "marginBottom": "20px",
-            "textShadow": "1px 1px 2px #ccc"  # Sombra sutil
+            "textShadow": "1px 1px 2px #ccc"  
         }
     ),
     html.Div([
