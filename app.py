@@ -118,6 +118,11 @@ app.layout = html.Div([
             "justifyContent": "space-around",
             "backgroundColor": "#0a0954"}),
     html.Div([
+        html.H2("Palabras más utilizadas en informe: Brecha Digital e Inclusión 17/04/2023", style={
+        "textAlign": "center",
+        "marginBottom": "10px",
+        "color": "#333333"
+        }),
         html.Img(src="/assets/wordcloud.png", style={
             "display": "block",
             "marginLeft": "auto",
