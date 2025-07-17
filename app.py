@@ -51,7 +51,18 @@ fig_bubble = make_bbplot(df, current_prueba)
 fig_bars = make_bchart(df)
 app = Dash(__name__)
 app.layout = html.Div([
-    html.H1("Dashboard Brecha Digital"),
+    html.H1(
+        "Dashboard Brecha Digital Educativa",
+        style={
+            "textAlign": "center",         # Centra el texto
+            "color": "#ffffff",            # Un gris azulado sobrio
+            "fontSize": "36px",            # Tamaño grande
+            "fontFamily": "Segoe UI, sans-serif",  # Fuente más moderna
+            "marginTop": "20px",
+            "marginBottom": "20px",
+            "textShadow": "1px 1px 2px #ccc"  # Sombra sutil
+        }
+    ),
     html.Div([
         dcc.Slider(
             id='year-slider',
@@ -99,7 +110,7 @@ app.layout = html.Div([
             "display": "flex",
             "flexDirection": "row",
             "justifyContent": "space-around",
-            "backgroundColor": "#e9e9e9"}),
+            "backgroundColor": "#0a0954"}),
     html.Div([
         html.Img(src="/assets/wordcloud.png", style={
             "display": "block",
@@ -109,7 +120,7 @@ app.layout = html.Div([
             "height": "100%"
         })
     ], style={"backgroundColor": "#ffffff", "padding": "1%", "borderRadius": "10px", "minHeight": "40vh", "margin": "1% auto", "maxWidth": "30%", "maxHeigth": "40%"})
-], style={"backgroundColor": "#e9e9e9"})
+], style={"backgroundColor": "#0a0954"})
 
 @callback(
     Output('barchart', 'figure'),

@@ -40,10 +40,10 @@ def make_heatmapMatriculas():
             fila.append(
                 f"<b>Región:</b> {region}<br>"
                 f"<b>Año:</b> {año}<br>"
-                f"<b>Tasa Matrícula:</b> {tasa_text}<br>"
-                f"<b>%Conexiones por Vivienda:</b> {conexiones_text}<br>"
-                f"<b>Total de Estudiantes que Rindieron la Admisión:</b> {admisiones_text}<br>"
-                f"<b>Total de Estudiantes Matriculados:</b> {matriculas_text}"
+                f"<b>Tasa de matrícula:</b> {tasa_text}%<br>"
+                f"<b>Conexiones fijas a internet por habitante:</b> {conexiones_text}%<br>"
+                f"<b>Total de estudiantes que rindieron la rdmisión:</b> {admisiones_text}<br>"
+                f"<b>Total de estudiantes matriculados:</b> {matriculas_text}"
             )
         hovertext.append(fila)
 
@@ -55,13 +55,19 @@ def make_heatmapMatriculas():
         text=hovertext,
         hoverinfo='text',
         colorscale='Reds',
-        colorbar=dict(title="Tasa de Matrícula")
+        colorbar=dict(title="Tasa de Matrícula (%)")
     ))
 
     fig.update_layout(
         width=500,
         height=600,
-        title="Tasa de Matrícula por Región y Año",
+        #title="Tasa de ingreso a la educación superior por región y año",
+        title={
+        'text': "Tasa de ingreso a la educación superior por región y año",
+        'font': dict(size=16),  
+        'x': 0.5,
+        'xanchor': 'center'
+        },
         xaxis_title="Año",
         yaxis_title="Región"
     )
