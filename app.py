@@ -63,6 +63,12 @@ app.layout = html.Div([
             "textShadow": "1px 1px 2px #ccc"  
         }
     ),
+    html.P(
+        "Este dashboard muestra la evolución y distribución regional de la brecha digital educativa en Chile,"
+        "enfocándose en el acceso a la educación superior."
+        " Se analiza la tasa de matrícula, conexiones a internet por habitante y rendimiento promedio en las pruebas de acceso en los años 2007, 2017 y 2024.",
+        style={"textAlign": "center", "fontSize": "16px", "color": "#fff", "maxWidth": "800px", "margin": "0 auto 30px auto"}
+    ),
     html.Div([
         dcc.Slider(
             id='year-slider',
