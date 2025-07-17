@@ -46,7 +46,14 @@ current_prueba = "MATE1_REG_ACTUAL"
 pruebas_paes=['M1', 'M2', 'HISTORIA', 'LENGUAJE', 'CIENCIAS']
 pruebas_psuptu=['MATEMATICA', 'HISTORIA', 'LENGUAJE', 'CIENCIAS']
 pruebas = pruebas_paes
+
+df_by_year = {}
+for year in [2007, 2017, 2024]:
+    set_year(year)
+    df = get_df()
+    df_by_year[year] = df
 df = get_df()
+
 fig_bubble = make_bbplot(df, current_prueba)
 fig_bars = make_bchart(df)
 app = Dash(__name__)
@@ -138,11 +145,9 @@ app.layout = html.Div([
     Input('year-slider', 'value'),
 )
 def update_bars(year):
-    set_year(year)
-    fig = make_bchart(get_df(), year)
+    df = df_by_year[year]
+    fig = make_bchart(df, year)
     return fig
-
-
 
 
 @callback(
@@ -177,7 +182,7 @@ def update_bbchart(year, prueba):
             current_prueba="CIEN_ACTUAL"
         elif prueba=="LENGUAJE":
             current_prueba="LENG_ACTUAL"
-    df = get_df()
+    df = df_by_year[year]
     fig_bbplot =make_bbplot(df, current_prueba, prueba, es_paes)
     return fig_bbplot
 
