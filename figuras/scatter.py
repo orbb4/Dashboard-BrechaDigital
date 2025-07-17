@@ -1,29 +1,24 @@
 import pandas as pd
 import plotly.express as px
 
-def make_scatter_matricula_vs_gasto():
-    # Cargar datos
-    df = pd.read_csv("Dataset/TasaMatriculaGastoPublico.csv")
+def scatter_por_grupo(df, grupo):
+    df_filtrado = df[df["Grupo"] == grupo]
 
-    # Crear scatter plot
+    color = "firebrick" if grupo == "mayor pobreza" else "seagreen"
+    titulo = f"Conexiones fijas vs pobreza en las comunas con {grupo.lower()} en el 2017"
+
     fig = px.scatter(
-        df,
-        x="TASA_MATRICULA",
-        y="GASTO_EDUCACION_PER_CAPITA",
-        text="AÑO",
+        df_filtrado,
+        x="% conexiones por vivienda",
+        y="% pobreza",
+        text="Nombre comuna",
         labels={
-            "TASA_MATRICULA": "Tasa de matrícula promedio nacional (%)",
-            "GASTO_EDUCACION_PER_CAPITA": "Gasto público en educación per cápita (CLP)"
+            "% conexiones por vivienda": "% de conexiones a internet",
+            "% pobreza": "% de pobreza"
         },
-        title="Relación entre tasa de matrícula nacional y gasto público en educación per cápita"
+        title=titulo
     )
-
-    # Estilo
-    fig.update_traces(marker=dict(size=10, color="royalblue"), textposition="top center")
-    fig.update_layout(
-        width=700,
-        height=400,
-        title_x=0.5
-    )
+    fig.update_traces(marker=dict(size=12, color=color), textposition="top center")
+    fig.update_layout(title_font_size=15)
 
     return fig
