@@ -145,8 +145,8 @@ def get_df_pobreza():
     print(df.columns.tolist())
     df['% pobreza'] = df['Porcentaje de personas en situación de pobreza por ingresos 2017']
     df_ordenado = df.sort_values('% pobreza')
-    comunas_menos_pobreza = df_ordenado.head(12).reset_index(drop=True)
-    comunas_mas_pobreza = df_ordenado.tail(12).sort_values('% pobreza', ascending=False).reset_index(drop=True)
+    comunas_menos_pobreza = df_ordenado.head(20).reset_index(drop=True)
+    comunas_mas_pobreza = df_ordenado.tail(20).sort_values('% pobreza', ascending=False).reset_index(drop=True)
     print("Menor pobreza:")
     print(comunas_menos_pobreza[['Nombre comuna', '% pobreza']])
     print("\nMayor pobreza:")

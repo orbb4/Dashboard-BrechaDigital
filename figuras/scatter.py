@@ -4,8 +4,8 @@ import plotly.express as px
 def scatter_por_grupo(df, grupo):
     df_filtrado = df[df["Grupo"] == grupo]
 
-    color = "firebrick" if grupo == "mayor pobreza" else "seagreen"
-    titulo = f"Conexiones fijas vs pobreza en las comunas con {grupo.lower()} en el 2017"
+    color = "firebrick" if grupo == "mayor pobreza" else "#0ae5f3"
+    titulo = f"Conexiones fijas vs pobreza en las comunas con {grupo.lower()} en 2017"
 
     fig = px.scatter(
         df_filtrado,
@@ -15,7 +15,7 @@ def scatter_por_grupo(df, grupo):
         custom_data=["Región","Nombre comuna", "Número de personas en situación de pobreza","% conexiones por vivienda", "% pobreza"],
         labels={
             "% conexiones por vivienda": "Conexiones fijas a internet por vivienda (%)",
-            "% pobreza": "Pobreza (%)"
+            "% pobreza": "Personas en situación de pobreza (%)"
         },
         title=titulo
     )
@@ -33,6 +33,8 @@ def scatter_por_grupo(df, grupo):
                         "<b> Porcentaje de pobreza:</b>%{customdata[4]:.2f}%<br>" +
                         "<extra></extra>"  
     )
+    
+    
     fig.update_layout(title_font_size=15)
 
     return fig

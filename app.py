@@ -4,19 +4,23 @@ from figuras.rankingbars import make_bchart
 from figuras.heatMapTasaMatricula import make_heatmapMatriculas
 from figuras.heatMapConexiones import make_heatmapConexiones
 from figuras.scatter import scatter_por_grupo
+from figuras.barras import barras_por_grupo
 from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, get_df_viviendas, get_df_prueba, get_df_pobreza, set_year
 import pandas as pd
 
 
 fig_heatmapMatriculas = make_heatmapMatriculas()
 fig_heatmapConexiones = make_heatmapConexiones()
+
 #para scatter
 df_conexionesPobreza = pd.read_csv("Dataset/conexionVsPobreza.csv")
 df_mas_pobreza = df_conexionesPobreza[df_conexionesPobreza["Grupo"] == "mayor pobreza"]
 df_menos_pobreza = df_conexionesPobreza[df_conexionesPobreza["Grupo"] == "menor pobreza"]
 fig_scatter_mas = scatter_por_grupo(df_mas_pobreza, "mayor pobreza")
 fig_scatter_menos = scatter_por_grupo(df_menos_pobreza, "menor pobreza")
-
+#para barras
+fig_barras_mas = barras_por_grupo(df_mas_pobreza, "mayor pobreza")
+fig_barras_menos = barras_por_grupo(df_menos_pobreza, "menor pobreza")
 regiones_dict = {
     1: "Tarapacá",
     2: "Antofagasta",
@@ -139,24 +143,41 @@ app.layout = html.Div([
             "justifyContent": "space-around",
             "backgroundColor": "#0a0954"}),
     html.Div([
+        # Grupo mayor pobreza
         html.Div([
-            dcc.Graph(id="scatter-mas", figure=fig_scatter_mas)
+            dcc.RadioItems(
+                id="tipo-grafico-mas",
+                options=[
+                    {"label": "Scatter", "value": "scatter"},
+                    {"label": "Barras", "value": "barras"}
+                ],
+                value="scatter",
+                inline=True,
+                labelStyle={"marginRight": "30px"},  
+                style={"marginBottom": "10px"}
+            ),
+            dcc.Graph(id="grafico-mas", style={'height': '500px'})
         ], style={
-            "margin": "1%",
-            "padding": "1%",
-            "backgroundColor": "#ffffff",
-            "borderRadius": "10px",
-            "flex": "1"
+            "margin": "1%", "padding": "1%", "backgroundColor": "#ffffff", "borderRadius": "10px", "flex": "1"
         }),
+
+        # Grupo menor pobreza
         html.Div([
-            dcc.Graph(id="scatter-menos", figure=fig_scatter_menos)
+                dcc.RadioItems(
+                id="tipo-grafico-menos",
+                options=[
+                    {"label": "Scatter", "value": "scatter"},
+                    {"label": "Barras", "value": "barras"}
+                ],
+                value="scatter",
+                inline=True,
+                labelStyle={"marginRight": "30px"}, 
+                style={"marginBottom": "10px"}
+            ),
+            dcc.Graph(id="grafico-menos", style={'height': '500px'})
         ], style={
-            "margin": "1%",
-            "padding": "1%",
-            "backgroundColor": "#ffffff",
-            "borderRadius": "10px",
-            "flex": "1"
-        })
+            "margin": "1%", "padding": "1%", "backgroundColor": "#ffffff", "borderRadius": "10px", "flex": "1"
+        }),
     ], style={
         "display": "flex",
         "flexDirection": "row",
@@ -239,7 +260,28 @@ def update_dropdown(year):
         default_value = "MATEMATICA"
     return pruebas, default_value
 
-#comunas_mas_pobreza, comunas_menos_pobreza = get_df_pobreza()
-#comunas_mas_pobreza.to_csv("comunas_mas_pobreza.csv", index=False, encoding="utf-8")
-#comunas_menos_pobreza.to_csv("comunas_menos_pobreza.csv", index=False, encoding="utf-8")
+@app.callback(
+    Output("grafico-mas", "figure"),
+    Input("tipo-grafico-mas", "value")
+)
+def update_grafico_mas(tipo):
+    if tipo == "scatter":
+        return fig_scatter_mas
+    else:
+        return fig_barras_mas
+
+@app.callback(
+    Output("grafico-menos", "figure"),
+    Input("tipo-grafico-menos", "value")
+)
+def update_grafico_menos(tipo):
+    if tipo == "scatter":
+        return fig_scatter_menos
+    else:
+        return fig_barras_menos
+
+
+comunas_mas_pobreza, comunas_menos_pobreza = get_df_pobreza()
+comunas_mas_pobreza.to_csv("comunas_mas_pobreza.csv", index=False, encoding="utf-8")
+comunas_menos_pobreza.to_csv("comunas_menos_pobreza.csv", index=False, encoding="utf-8")
 app.run(debug=True)
