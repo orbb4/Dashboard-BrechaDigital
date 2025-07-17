@@ -12,13 +12,27 @@ def scatter_por_grupo(df, grupo):
         x="% conexiones por vivienda",
         y="% pobreza",
         text="Nombre comuna",
+        custom_data=["Región","Nombre comuna", "Número de personas en situación de pobreza","% conexiones por vivienda", "% pobreza"],
         labels={
-            "% conexiones por vivienda": "Porecentaje de conexiones fijas a internet por vivienda",
-            "% pobreza": "Porcentaje de pobreza"
+            "% conexiones por vivienda": "Conexiones fijas a internet por vivienda (%)",
+            "% pobreza": "Pobreza (%)"
         },
         title=titulo
     )
-    fig.update_traces(marker=dict(size=12, color=color), textposition="top center")
+    fig.update_traces(marker=dict(size=14, color=color), textposition="top center",
+                      textfont=dict(
+                            size=12,
+                            color='black',
+                            family='Helvetica'
+                        ),
+                      hovertemplate=
+                        "<b>Región:</b>%{customdata[0]}<br>" +
+                        "<b>Comuna:</b>%{customdata[1]}<br>" +
+                        "<b>Número de personas en situación de pobreza:</b>%{customdata[2]}<br>" +
+                        "<b>Porcentaje de conexiones:</b>%{customdata[3]:.2f}%<br>" +
+                        "<b> Porcentaje de pobreza:</b>%{customdata[4]:.2f}%<br>" +
+                        "<extra></extra>"  
+    )
     fig.update_layout(title_font_size=15)
 
     return fig

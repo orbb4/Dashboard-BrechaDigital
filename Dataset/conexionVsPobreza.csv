@@ -1,11 +1,11 @@
-Código,Región,Nombre comuna,Número de personas en situación de pobreza por ingresos,% pobreza,Número conexiones fijas,Total Viviendas,% conexiones por vivienda,Grupo
-9121,IX de la Araucanía ,Cholchol,4292,41.604544,82,4213,1.9463565155471163,mayor pobreza
-8314,VIII del Biobío,Alto Biobío,3741,39.734079,23,2137,1.0762751520823586,mayor pobreza
-9106,IX de la Araucanía ,Galvarino,3647,37.286297000000005,170,4275,3.976608187134503,mayor pobreza
-9116,IX de la Araucanía ,Saavedra,4285,35.380893,36,5686,0.6331340133661625,mayor pobreza
-9118,IX de la Araucanía ,Toltén,3104,35.105058,128,4153,3.0821093185648927,mayor pobreza
-13132,XIII Metropolitana de Santiago,Vitacura,99,0.134706,25418,31777,79.98867105138937,menor pobreza
-13114,XIII Metropolitana de Santiago,Las Condes,558,0.19068500000000002,93240,118007,79.01226198445855,menor pobreza
-13123,XIII Metropolitana de Santiago,Providencia,513,0.431632,60584,70965,85.37166208694427,menor pobreza
-13120,XIII Metropolitana de Santiago,Ñuñoa,1143,0.8984519999999999,62383,92248,67.62531436995924,menor pobreza
-13113,XIII Metropolitana de Santiago,La Reina,875,0.985902,21818,29801,73.21230831180162,menor pobreza
+Código,Región,Nombre comuna,Número de personas en situación de pobreza,% pobreza,Número conexiones fijas,Total Viviendas,% conexiones por vivienda,Grupo
+9121,Región de la Araucanía ,Cholchol,4292,41.604544,82,4213,1.9463565155471163,mayor pobreza
+8314,Región del Biobío,Alto Biobío,3741,39.734079,23,2137,1.0762751520823586,mayor pobreza
+9106,Región de la Araucanía ,Galvarino,3647,37.286297000000005,170,4275,3.976608187134503,mayor pobreza
+9116,Región de la Araucanía ,Saavedra,4285,35.380893,36,5686,0.6331340133661625,mayor pobreza
+9118,Región de la Araucanía ,Toltén,3104,35.105058,128,4153,3.0821093185648927,mayor pobreza
+13132,Región Metropolitana de Santiago,Vitacura,99,0.134706,25418,31777,79.98867105138937,menor pobreza
+13114,Región Metropolitana de Santiago,Las Condes,558,0.19068500000000002,93240,118007,79.01226198445855,menor pobreza
+13123,Región Metropolitana de Santiago,Providencia,513,0.431632,60584,70965,85.37166208694427,menor pobreza
+13120,Región Metropolitana de Santiago,Ñuñoa,1143,0.8984519999999999,62383,92248,67.62531436995924,menor pobreza
+13113,Región Metropolitana de Santiago,La Reina,875,0.985902,21818,29801,73.21230831180162,menor pobreza
