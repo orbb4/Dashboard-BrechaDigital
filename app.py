@@ -1,8 +1,14 @@
 from dash import Dash, dcc, html, dash, Output, Input, callback
 from figuras.bbplot import make_bbplot
 from figuras.rankingbars import make_bchart
+from figuras.heatMapTasaMatricula import make_heatmapMatriculas
+from figuras.heatMapConexiones import make_heatmapConexiones
 from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, get_df_viviendas, get_df_prueba, set_year
 import pandas as pd
+
+
+fig_heatmapMatriculas = make_heatmapMatriculas()
+fig_heatmapConexiones = make_heatmapConexiones()
 
 def get_df():
     df_pop = get_df_pop()
@@ -51,6 +57,32 @@ app.layout = html.Div([
         ], style={"display": "flex", "height": "70vh", "minHeight": "0"})
     ], style={"backgroundColor": "#ffffff", "padding": "1%", "borderRadius": "10px", "minHeight": "80vh", "margin": "1%"}),
     # fin de la fila
+    html.Div([
+        html.Div([
+            dcc.Graph(figure=fig_heatmapMatriculas, id="heatmap1")
+        ], style={
+            "margin": "1%", 
+            "padding": "1%", 
+            "backgroundColor": "#ffffff", 
+            "borderRadius": "10px",
+            "flex": "1"
+        }),
+
+        html.Div([
+            dcc.Graph(figure=fig_heatmapConexiones, id="heatmap2")
+        ], style={
+            "margin": "1%", 
+            "padding": "1%", 
+            "backgroundColor": "#ffffff", 
+            "borderRadius": "10px",
+            "flex": "1"
+        })
+    ], style={
+        "display": "flex",
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "backgroundColor": "#e9e9e9"
+    })
 ], style={"backgroundColor": "#e9e9e9"})
 
 @callback(
@@ -114,6 +146,4 @@ def update_dropdown(year):
         pruebas=pruebas_psuptu
         default_value = "MATEMATICA"
     return pruebas, default_value
-
-
 app.run(debug=True)

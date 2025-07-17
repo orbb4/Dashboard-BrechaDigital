@@ -138,3 +138,19 @@ def get_df_prueba():
         df_prueba = pd.read_csv("Dataset\\Promedios Admisión PSU\\PromedioPorRegion"+str(year)+".csv")
     df_prueba = df_prueba.rename(columns={"CODIGO_REGION": 'COD_REG_RBD'})
     return df_prueba
+
+def load_years():
+    archivos = {
+        2007: 'Dataset/TasaMatriculaConexiones/datos_2007.csv',
+        2017: 'Dataset/TasaMatriculaConexiones/datos_2017.csv',
+        2024: 'Dataset/TasaMatriculaConexiones/datos_2024.csv'
+    }
+
+    lista_dfs = []
+    for year, file in archivos.items():
+        df = pd.read_csv(file)
+        df['year'] = year
+        lista_dfs.append(df)
+
+    df_total = pd.concat(lista_dfs, ignore_index=True)
+    return df_total
