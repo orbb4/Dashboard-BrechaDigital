@@ -1,0 +1,466 @@
+Brecha Digital e Inclusión
+Serie Informe Nº 46-23, 17/04/2023
+Resumen
+La presente minuta aborda el tema de la brecha digital y las políticas de inclusión
+para revertir las desigualdades sociales asociadas al acceso, uso y competencias
+digitales. Parte con una definición del marco internacional sobre derecho al acceso
+a Internet, las categorías de brechas digitales (Acceso, Uso y Apropiación).
+Posteriormente, la siguiente sección analiza el estado de situación en cada una de
+ellas en Chile, teniendo en perspectiva la comparación con América Latina y la
+OCDE. Finalmente, se describen las actuales políticas de inclusión digital
+desarrolladas por el actual gobierno, que se organizan en torno a cuatro ejes
+estratégicos, que preferentemente apuntan a temas de acceso y conectividad.
+Departamento de Estudios, Extensión y Publicaciones - Biblioteca del Congreso Nacional
+eMail: frivera@bcn.cl
+1. Introducción
+La historia nos ha enseñado que cada cambio de época ha venido de la mano de
+profundas transformaciones económicas, políticas y culturales. Para nadie es
+novedad que en la actualidad atravesamos un intenso proceso de cambio de época,
+que diversos autores han definido como “Sociedad de la Información”, “Sociedad
+del Conocimiento” o “Sociedad del Riesgo”. Todas estas concepciones ponen de
+relieve un nuevo eje del desarrollo y de la sociabilidad, que se sustenta en las
+tecnologías de la información y de la comunicación y como éstas son ocupadas por
+los países para dar saltos productivos, en competitividad y mejoramiento de la
+calidad de la democracia. La sociedad del conocimiento, por tanto, plantea
+requerimientos a escala de las personas, que dicen relación con la equidad del
+acceso y manejo de calidad de las nuevas tecnologías de la información y
+comunicación. En este sentido, aquellos segmentos de la población que no accedan
+o lo hagan de manera restringida a dichas tecnologías y su uso eficiente, verán
+amplificadas las brechas de desigualdad, por lo demás ya éticamente preocupantes
+para la sociedad chilena y global, pues no podrán aprovechar las oportunidades
+que ofrece este cambio de época, al tiempo que su acceso a trabajos de calidad y
+al bienestar humano se verá mermado de manera significativa.
+El acceso y uso de las tecnologías digitales en el contexto de la pandemia de
+COVID-19, fue un catalizador en la masificación de las tecnologías digitales, que
+impuso la necesidad a los países de expandir su cobertura de manera agresiva,
+pues la población se vio obligada en la mayoría de los Estados a permanecer
+recluida en sus casas. De esta forma, el acceso a computadores, teléfonos móviles,
+internet, software y el conocimiento en el uso de estos y su uso de calidad, se
+transformó en el medio principal, sino el único, por el cual las personas podían
+acceder al trabajo, la educación, la salud, el abastecimiento, las relaciones
+sociales, entre otras. Ello implicó desnudar las diferencias y dificultades en el
+acceso a las tecnologías digitales que experimentaban diversos grupos de
+población, en especial las poblaciones de menores ingresos, aisladas, rurales,
+barrios urbanos pobres con enormes carencias de infraestructura, mujeres,
+adultos mayores, entre otros, que representaron un desafío de mayor envergadura
+para los gobiernos.
+Estas diferencias y dificultades en el acceso a las tecnologías digitales, es lo que
+tradicionalmente ha sido llamado Brecha Digital, sobre la cual se venía
+reflexionando desde hace tres décadas en el mundo, que se ha expresado en
+diversas políticas públicas, cooperación internacional e iniciativas privadas para
+aplacarlas e incluir a las población más desventajada. Pero el contexto de la
+pandemia obligó a acelerar el tranco de las iniciativas en esta materia, pues las
+desigualdades observadas y la fragilidad que experimentaron amplios segmentos
+de la población, han hecho aún más imperativo avanzar en forma agresiva y sólida.
+Es por ello que esta minuta describe los principales elementos orientadores en la
+definición de brecha digital, así como los esfuerzos emprendidos por el Gobierno
+de Chile entre 2020-2023 para subsanarla.
+2. Principales Definiciones
+La incorporación del acceso a internet dentro de los Objetivos de Desarrollo
+Sostenible (ODS) de la Naciones Unidas (Agenda 2030) el año 2015, fue una de
+las señales de la importancia que había ido adquiriendo las tecnologías digitales
+de la información y comunicación dentro de una agenda global de Naciones Unidas,
+y cómo esta se entrelazaba con la promoción de los derechos humanos. En el
+objetivo n°9 de los ODS, se establece “Construir infraestructuras resilientes,
+promover la industrialización sostenible y fomentar la innovación”
+1
+. Para hacer
+operativo dicho objetivo, plantea en la meta 9c, “Aumentar significativamente el
+acceso a la tecnología de la información y las comunicaciones y esforzarse por
+proporcionar acceso universal y asequible a Internet en los países menos
+adelantados de aquí a 2020”
+2
+. Como se aprecia, el principal foco de preocupación
+en este objetivo está centrado en el acceso universal a recursos digitales e
+internet.
+En otro objetivo de los ODS, como es el objetivo n°5 el cual propone “Lograr la
+igualdad entre los géneros”
+3
+, en su meta 5b señala, “Mejorar el uso de la tecnología
+instrumental, en particular la tecnología de la información y las comunicaciones,
+para promover el empoderamiento de la mujer”
+4
+, que como se observa, apunta al
+uso habilitante de las tecnologías digitales para potenciar efectos positivos en un
+grupo poblacional específico, el cual muestra una situación de desigualdad
+sistémica, como son las mujeres.
+Ambos objetivos, no obstante su importancia, no hacían explícito el vínculo entre
+derechos humanos y el derecho al acceso y uso de las tecnologías digitales. Fue
+por ello que al año siguiente, en 2016, en el 32° Período de Sesiones del Consejo
+de Derechos Humanos, se trabajó una primera propuesta para consagrar el
+derecho al acceso a internet como un derecho humano5
+, que buscaba un enfoque
+global de las tecnologías digitales dentro de la arquitectura normativa de las
+Naciones Unidas. Esta propuesta, finalmente, fue aprobada el 2 de julio de 2018
+dentro del marco del 38° Período de Sesiones del Consejo de Derechos Humanos6
+,
+que buscaba la “Promoción, protección y disfrute de los derechos humanos en
+Internet”
+7
+.
+Independiente que el instrumento se estableció como no vinculante, representa el
+primer instrumento internacional amplio, que consagraba el derecho al acceso a
+internet como un derecho humano, poniendo en relieve el carácter central de las
+tecnologías digitales en la vida de las personas, que va más allá de la productividad
+y el acceso, sino que se han transformado en soporte del ejercicio de múltiples
+otros derechos humanos, como la libertad de expresión, el bienestar, la educación,
+el trabajo, entre muchos otros.
+Lo relevante de estos instrumentos, es que conforman la expresión en el derecho
+internacional de una preocupación que venía instalándose desde la década de 1990
+en el mundo, respecto de un fenómeno emergente, que fue definido como “brecha
+digital”8
+. La brecha digital está relacionada con la desigualdad social, económica y
+territorial, que se expresa en diferencias en el acceso, uso y apropiación de las
+tecnologías digitales, que contribuyen a perpetuar estas desigualdades9
+. Además,
+la brecha digital puede tener efectos en la participación política y el acceso a información crucial en ámbitos como la educación, la salud y trabajo, elementos
+esenciales en el bienestar humano. Por lo tanto, los esfuerzos para cerrar la brecha
+digital y garantizar el acceso equitativo a las tecnologías de la información y la
+comunicación son cruciales para promover la igualdad social y mejorar la calidad
+de vida de las personas.
+Diversos autores han explorado categorías para definir la brecha digital, que han
+acentuado, diferenciado o integrado diversas dimensiones del problema. A este
+respecto, existe un relativo consenso en distinguir tres dimensiones como las
+principales, como son el acceso, el uso práctico y su uso habilitante. A este
+respecto, tomaremos la definición de brechas digitales desarrolladas por Selwyn10
+,
+quien distingue tres tipos de brechas digitales.
+ La brecha de acceso, disponibilidad de dispositivos y acceso a internet en
+los hogares, escuelas y comunidades. El acceso desigual a dispositivos y
+conexión a internet, tanto en términos sociales (políticas acceso universal)
+como al interior del hogar, ha demostrado estar asociado tanto a variables
+socioeconómicas11, de género12, como de emplazamiento territorial13, que
+conforma un sistema de inequidad asociado a la distribución desigual en
+las posibilidades de uso de calidad de las TIC’s14
+.
+ La brecha de uso, que remite al tipo de dispositivos y acceso a internet, el
+tiempo o factibilidad de uso, como también, el desarrollo de habilidades y
+capacidades críticas en su utilización. Respecto a las condiciones de uso, se
+observa que quienes no tienen acceso a dispositivos y conexión a internet,
+representa en la sociedad del conocimiento, según Jones y Flannigan, una
+condición de discapacidad15, que inhabilita poder desenvolverse de manera
+exitosa en la sociedad contemporánea16
+.
+ La brecha de apropiación, que se relaciona con el uso significativo de la
+tecnología, que va desde el control, selección, utilización y creación de
+contenidos de manera competente y sofisticada, los que comparte a través
+de medios digitales.
+Tomando estos tres tipos de brechas digitales, describiremos las acciones
+emprendidas desde las políticas públicas para acortarlas. Pero primero,
+describiremos el contexto del desarrollo de la infraestructura tecnológica de
+América Latina y Chile para poner una línea de base en comparación con la región.
+3. Contexto de la Brecha Digital en América Latina y Chile
+Hay que reconocer que esta brecha digital es un fenómeno que venía advirtiéndose
+en diversos estudios, y había una luz de alarma como una de las debilidades de la
+región para enfrentar los desafíos de la sociedad contemporánea. De esta forma,
+la pandemia lo que hizo fue visibilizar las limitaciones estructurales en materia de
+políticas digitales de América Latina. Ello se evidencia en el hecho de que en
+Latinoamérica y el Caribe hay 244 millones de personas sin acceso a internet, lo
+que representa un 32% de la población17, como atestigua el Informe del IICA, el
+BID y Microsoft del año 2021. Por otra parte, el mismo informe señala que un 71%
+de la población urbana cuenta con conectividad, que contrasta con el 37% de la
+población rural. Un reporte de la Cepal18 del año 2020 da cuenta de la conectividad
+a internet analizando por ingresos del hogar, el cual señala para 12 países de la
+región, incluido Chile, que en promedio un 81% del quintil de mayor ingreso
+(quintil V) cuenta con conexión a internet, mientras que para los dos quintiles de
+menores ingresos (quintiles I y II) los promedios son de 38% y 53%. Finalmente,
+el mismo informe señala que un 44% de los países analizados no se alcanzaba la
+velocidad de descarga que permite desarrollar varias actividades en línea de
+manera simultánea19, lo que obliga a tener que elegir entre la educación a distancia
+de los hijos o hijas o el teletrabajo.
+Estos datos muestran una clara limitante en las posibilidades de acceso y usos de
+las tecnologías digitales que tiene la población de la región dependiendo de su
+origen socioeconómico o condición de emplazamiento de su hogar (rural o urbano),
+lo que viene a amplificar las brechas ya existentes, ahondando la desigualdad.
+En el caso de Chile, y siguiendo las categorías de Selwyn20 de brechas de acceso,
+uso y apropiación, se observa que el país presenta una situación relativa mejor
+que muchos de los países de la región, pero no obstante ello, evidencia todavía
+importantes diferencias en los diferentes tipos de brechas digitales, por lo que su
+posición relativa mejor, todavía se encuentra lejos de la media de la OCDE, que es
+el parámetro que el país ha asumido como punto de comparación para sus políticas
+públicas.
+3.1. Brecha de Acceso
+Chile ha mostrado una expansión de la conectividad que lo pone a la vanguardia
+regional, que no obstante mostrar los mismos sesgos socioeconómicos y de
+emplazamiento (rural/urbano) que los países latinoamericanos, las diferencias son
+menos acentuadas.
+ Masificación de dispositivos digitales: masificación de computadores
+personales a través de programas públicos orientados a la población
+escolar, como fueron Me Conecto para Aprender y Yo Elijo Mi PC,
+actualmente unificadas en el programa Becas TIC. Sólo en el año 2020
+entregaron 122.000 notebook21 (además de 11 meses de conexión a
+Internet gratuita). Ya hace una década, en el año 2013, “ocho de cada diez estudiantes de educación media cuenta con acceso a internet desde su
+hogar”
+22, por lo que actualmente podría hablarse de universalidad en el
+acceso a nivel de la población escolar.
+ Políticas de acceso universal: Tempranas políticas públicas de acceso
+universal en la década de los noventas, a través de la red de bibliotecas
+públicas (Biblioredes), los colegios (Enlaces) o telecentros (comunitarios,
+pymes, centros juveniles, etc.), entre otras iniciativas, han hecho que el
+problema de acceso sea muy acotado, han reducido las barreras de acceso
+a la tecnología, ya sea tanto en el hogar o gratuito en instituciones públicas.
+ Masificación de la telefonía móvil: La telefonía móvil en el país ha superado
+con creces a la población del país, pues se registran más de 33 millones de
+dispositivos en función23, siendo la población de Chile alrededor de
+19.500.000 personas, habla que el acceso al hardware sea un tema
+meridianamente resuelto tanto por órganos públicos como por el mercado.
+ Masificación de la conectividad a Internet: En términos globales, los “datos
+de la Subsecretaría de Telecomunicaciones evidencian que, a diciembre de
+2019, en Chile había un total de 3.434.402 conexiones totales fijas
+(3.033.188 residenciales y 401.214 comerciales. En lo que respecta a las
+conexiones móviles (3G y 4G), a marzo de 2020, totalizaron 18.057.243
+(12.461.744 residenciales, 1.563.560 comerciales y 4.031.939 no
+identificadas)”
+24
+. Estos datos posicionan a Chile en el segundo lugar de
+América Latina en acceso a Internet según el informe de la OCDE25
+(después de Uruguay), además el informe señala que el acceso sigue
+siendo altamente correlacionado a los ingresos, no obstante Chile tener la
+segunda menor diferencia (22 puntos porcentuales).
+ Calidad de la conexión a Internet: Un elemento donde si se observan
+avances significativos en los últimos años, es que Chile en lo que respecta
+a la velocidad de la banda ancha para conexión a internet, es el país de la
+región con mayor velocidad según el ranking de Speedtest Global Index de
+Ookla, que fue hecho en el contexto del Covid-19, donde el país se ubica
+en el lugar 30 a nivel mundial26, el que incluso evidenció un aumento del
+9% desde que se decretó estado de pandemia.
+ Rezago territorial (rural / urbano): Donde el país muestra mayores brechas
+de acceso, como señala el estudio de Cepal27 del 2020, están relacionadas
+por el emplazamiento de los hogares, como evidencia que más del 50% de
+los hogares rurales cuentan con conexión a internet. Esto es refrendado en el reporte de País Digital y CISCO28, que señala que el país muestra que las
+regiones con mayor índice de ruralidad (Araucanía y Maule) están mucho
+más rezagadas que la región Metropolitana y con industrias productivas
+mejor insertas en el comercio internacional (Antofagasta y Magallanes).
+ Rezago socioeconómico: El ingreso económico es el otro gran factor que
+explica las diferencias de brecha de acceso a la conexión a Internet, como
+lo demuestra el estudio de Cepal de 2020, que muestra que el primer quintil
+de menores ingresos, presenta un 65% de conectividad. Esto se ve
+refrendado por el Barómetro de la Brecha Digital Social29 del año 2021, que
+muestra que “se encontró que los grupos de bajos ingresos, las mujeres y
+las personas con menores niveles de educación son los más afectados a la
+hora de acceder a servicios digitales como el trabajo remoto, la educación
+a distancia, comercio electrónico y los trámites virtuales del Estado, entre
+otros”
+30
+. Esto se explica, como señala el estudio, porque hay 23 comunas
+en el país y 174 barrios de la región Metropolitana que no tienen servicio
+de Internet provistos por empresas, que se condice con las zonas más
+pobres o de alta ruralidad.
+Estas cifras, no obstante ser menos dramáticas que las que muestra América
+Latina, no implica el carácter desmejorado para sus oportunidades que representa
+el acceso más restrictivo o limitado para las personas más pobres y/o emplazadas
+en zonas rurales, que se adiciona a las otras desventajas sociales que arrastran.
+3.2. Brecha de Uso
+La calidad de uso, entendida como las competencias mínimas definidos en los
+marcos de la alfabetización digital31 (navegar en la web, usar sistemas multimedia,
+comunicarse, usar software, procesadores de texto, etc.), continúa siendo una
+tarea compleja para muchos y muchas personas en el país.
+Respecto a las brechas de uso, se observa en diversos informes y evaluaciones,
+que existen importantes condicionamientos económicos, de niveles educativos, de
+género y emplazamiento territorial en el uso adecuado de las tecnologías digitales,
+que se muestra como independiente del acceso en su entorno a equipos y redes
+de conexión a Internet32
+.
+ Aumento sostenido del uso de Internet: El informe de País Digital del año
+2020, Brecha en el uso de internet: Desigualdad digital en el 2020,
+evidencia que el crecimiento del uso de recursos digitales para diversas tareas, que pasó de un 53% en el año 2013, pasando a un 72,2% en el
+año 2017, y se ha proyectado a más de un 80% para el año 202033
+.
+ Índice compuesto de resiliencia digital del hogar: este índice se calcula
+respecto del uso de Internet para diversas aplicaciones prácticas, como
+bajar y usar aplicaciones de salud, educación, comercio electrónico y el uso
+de fintech. A este respecto, se observa “que el promedio ponderado
+latinoamericano es de 30,70 (en una escala de 1 a 100), mientras que los
+países de la Organización para la Cooperación y el Desarrollo Económicos
+(OCDE) alcanzan 53,78. Chile tiene un índice de 41,78”
+34, es decir, estamos
+en una situación intermedia entre ambas realidades.
+ Déficit en el uso eficiente de las TIC’s en la población en general: Mientras
+los usos básicos vinculados al uso de buscadores, entretenimiento y/o
+redes sociales se han masificado ampliamente y con mucha rapidez; los
+usos orientados a una mayor productividad, como son el educación en
+línea, comercio y banca electrónica, trámites en línea, entre otros, no
+muestran un uso y distribución homogénea35, mostrando mayores rezagos
+personas adulta mayor, de menores ingresos y que viven en zonas pobres
+y/o rurales. A este respecto, El Barómetro de la Brecha Digital Ciudadana,
+creado por el Observatorio Iberoamericano de Comunicaciones Digitales,
+establece en sus investigaciones, que “las personas de bajos ingresos,
+quienes tienen menores niveles educacionales y las mujeres presentan
+mayor brecha a la hora de acceder a ciertos servicios digitales como
+teletrabajo, educación en línea, trámites virtuales del Estado, trámites
+virtuales de salud y comercio electrónico”
+36
+.
+ Políticas de alfabetización digital en escolares: Chile muestra un uso
+temprano y extendido de TIC’s en jóvenes entre 9 y 17 años, que muestra
+“que un 92% de ellos tiene smartphone y que la mayoría usa internet para
+acceder a las redes sociales (73%), jugar en línea (79%) y realizar
+actividades de aprendizaje tales como hacer tareas escolares (84%) o ver
+tutoriales (77%)”
+37
+. Además, los datos de la prueba internacional PISA
+2015 señalan que un 51% de los estudiantes chilenos utiliza recursos de
+internet para realizar sus tareas y un 21% dice hacerlo todos los días,
+siendo los estudiantes de Chile aquellos que presentan mayor tiempo de
+uso de internet fuera de contextos escolares38
+.
+ Déficit en el uso eficiente de las TIC’s en escolares: En contraste, este uso
+intensivo no se ve refrendado en la calidad del uso, pues las evaluaciones
+internacionales, como el Estudio Internacional de Alfabetización
+Computacional y Manejo de la Información (ICILS), realizado en los años
+2013 y 2017 por las Asociación Internacional para la Evaluación del Logro Educativo (IEA), en las que participó Chile, muestra “que el 90 % de los
+estudiantes de Chile muestra dificultades para usar un computador como
+herramienta de recopilación y gestión de la información y para evaluar la
+fiabilidad de la información presentada, derribando la idea de la existencia
+de nativos digitales”
+39
+.
+Hay elementos que muestran avances importantes en la masificación del uso, pero
+este todavía se concentra en aspectos de bajo valor agregado o potenciadores de
+oportunidades, lo que habla de un déficit que tiende a mostrarse coincidente a los
+sesgos que manifiesta la brecha de acceso.
+3.3. Brecha de apropiación
+Esta brecha remite a tres tipos de competencias de nivel superior. La primera, es
+la comprensión y uso crítico de las TIC’s, es decir, saber analizar y discriminar la
+información relevante de la que no lo es. La segunda, es la capacidad de crear y
+compartir contenido en diversas plataformas manejando una imagen social digital.
+Finalmente, la tercera, remite al desarrollo de competencias de “ciudadanía
+digital”
+40, que dicen relación con el resguardo de la información personal, el uso
+emancipador de las plataformas digitales con fines colectivos41, y la capacidad
+cívica de agenciar demandas mediante redes digitales42
+.
+Chile es en esta categoría donde muestra los mayores rezagos con los países de
+OCDE, pues implica un nivel superior de uso de la tecnología, como lo demuestran
+diversas evaluaciones.
+ Habilidades TIC en población adulta: Una de las mayores debilidades de la
+expansión de uso de las TIC en Chile, es el rezago que muestra mucha
+población adulta, que como señala el informe de la OCDE43, no obstante
+Chile estar dentro de los mejores de la región, muestra que un 25,2% de
+los adultos en el país tiene poca o nula experiencia informática, que refleja
+la penetración de las TIC y las características del nivel de desarrollo
+económico. Respecto a los conocimientos intermedios y altos de los adultos
+en el uso de computadores y resolución de problemas tecnológicos, Chile
+no obstante ser el mejor de la región evaluado, tienen sólo un 14,6% de
+adultos en esta categoría, que contrasta con el 29,7% del promedio de la
+OCDE.
+ Habilidades TIC para el trabajo: El informe de Accenture, El Futuro del
+Trabajo en Chile44
+, muestra que el sistema educativo en sus diferentes
+niveles y de capacitación, no están entregando competencias necesarias
+para enfrentar la demanda de nuevas habilidades del mercado laboral en
+una economía del conocimiento. Plantea el informe que si el desarrollo de
+habilidades y competencias no logra dar respuesta a los nuevos
+requerimientos que supone el progreso tecnológico, el país podría llegar a perder hasta 13 mil millones de dólares en crecimiento del PIB para los
+próximos diez años.
+ Productividad de trabajo: El estudio de Accenture45 también señala que el
+51% del tiempo de los trabajadores y trabajadoras en Chile puede
+potenciarse mediante el uso las tecnologías digitales, y que el 38% del
+tiempo dedicado al trabajo podría ser automatizado, cifra que se
+complementa con el diagnóstico que acompañan el análisis del informe del
+World Economic Forum46
+, The future of Jobs Report 2020, que señala que
+el porcentaje de trabajos en riesgo de automatización Chile supera el 50%,
+de los cuales, según estudio de la OCDE, alrededor de un 21,4% está en
+alto riesgo de automatización47
+.
+ Cambio en la concepción de competencias TIC en escolares: En el caso de
+Chile, el currículum establece que se debe promover el desarrollo de
+habilidades de orden superior en el manejo y relacionamiento con las TIC’s,
+que dice relación con “la capacidad de resolver problemas de gestión de
+información y comunicación en ambientes digitales; compartir y colaborar
+con otros a distancia, y conocer los riesgos y beneficios del uso de internet
+y su impacto en la sociedad”
+48. En este objetivo se observa que las TIC’s
+han dejado de ser un simple soporte o medio de comunicación o donde
+extraer información, transformándose en un espacio social virtual paralelo
+a la vida social física, donde la persona se despliega en relaciones de tipo
+económicas políticas, sociales y culturales.
+ Baja percepción de riesgos en escolares: Esta realidad debe ir aparejada
+de una serie de competencias y conocimientos para tener una vida digital
+fructífera, que tenga en el centro su resguardo personal, y la privacidad de
+su identidad e información personal. Esto especialmente importante, ante
+el hecho que dan cuenta diversos autores49, de que los estudiantes tienen
+una percepción baja de los riesgos de su desenvolvimiento en línea, que en
+el caso chileno se ha visto refrendado esta tendencia en el estudio del
+Mineduc del año 202050. Ello plantea como central el desarrollo de
+competencias de ciudadanía digital51, que no entrañan solo capacidades
+comunicativas, sino de códigos de ética y normas de comportamiento
+vinculadas al uso de las tecnologías.
+En este componente que apunta al desarrollo de habilidades digitales y
+tecnológicas de mayor complejidad, son justamente las que más rápido han
+crecido en demanda de los mercados laborales a nivel mundial, al igual que en
+Chile52, lo que plantea un alto riesgo de rezago. Por otra parte, el uso poco crítico
+de las tecnologías, también plantea riesgos de debilitamiento de la democracia y
+de la calidad de la política, caldo de cultivo para la propagación de noticias falsas
+o tendenciosas, y de liderazgos que apelan a la emocionalidad y el populismo. 4. Políticas de Inclusión Digital
+El desafío que representó la crisis sanitaria fruto del Covid-19, evidenció las
+falencias y debilidades de la agenda digital de Chile y del resto de los países de la
+región. Esto tuvo dos efectos positivos, primero, permitió conocer con datos
+certeros las capacidades de la infraestructura digital con que cuentan los países a
+su máxima capacidad y los tipos de usos y aprovechamiento de las TIC’s que hizo
+la población, que se vio obligada a desarrollar habilidades para poder desarrollar
+una vida digital (trabajo, salud, educación, abastecimiento, etc.). La segunda
+consecuencia positiva, es que los países con estas evaluaciones se vieron obligados
+a tomar medidas y desarrollar políticas de robustecimiento de la infraestructura
+digital, como también, de fortalecer las habilidades y usos de las TIC’s.
+Chile no escapó de esta tendencia, y no obstante, como se ha señalado, presentar
+un posición relativa mejor que el resto de países de América Latina (liderando en
+casi todas las categorías), todavía se encuentra lejos de los estándares que
+muestra la OCDE.
+A continuación, se resumirán algunas de las principales políticas que ha venido
+implementando y diseñando el país en materia de inclusión digital con
+posterioridad a la pandemia, las que se han centrado preferentemente en subsanar
+los rezagos en materia de brecha de acceso.
+La principal política del actual gobierno del Presidente Gabriel Boric para la
+inclusión digital, es el Plan Brecha Digital Cero 2022-2025, que se basa en
+propuestas regulatorias que fortalezcan y garanticen la conectividad y el acceso a
+infraestructura digital en todo el país para que “todos los habitantes del país
+tengan acceso a conectividad independiente del lugar del país en que viven o de
+las posibilidades económicas que tengan”
+53
+. Este plan contempla cuatro ejes
+estratégicos de políticas públicas:
+ Regulación para la conectividad: El primero de los cuatro pilares comprende
+todos los proyectos de ley impulsadas por la Subsecretaría de
+Telecomunicaciones (Subtel) que se encuentran en tramitación en el
+Congreso, que buscan garantizar la igualdad de oportunidades de acceso a
+Internet. Por de pronto, esto implica modificar tres leyes: General de
+Educación n°20.370, la de educación pública n°21.040 y la n°18.168 sobre
+telecomunicaciones. Las dos primeras buscan proveer de internet de
+calidad a todos los colegios, y la tercera, es reconocer el acceso a Internet
+como un servicio público, impidiendo la discriminación de determinadas
+zonas por factibilidad técnica o rentabilidad económica.
+ Infraestructura digital: Agrupa una serie de siete iniciativas que se vienen
+implementando para asegurar la conectividad al país, como son:
+o Última Milla (conectividad a zonas rurales, con un presupuesto
+asignado de más de 116 millones de dólares);
+o Conectividad para la Educación (enlazamiento de 10.086
+instituciones educativas, con un subsidio asignado superior a 17
+millones de dólares);
+o WiFi ChileGob (zonas gratuitas de conectividad inalámbrica);
+o Despliegue de la Red 5G (despliegue comercial con
+contraprestaciones sociales a 366 localidades); o Fibra Óptica Nacional (conexión de 202 comunas con 9.560
+kilómetros de fibra óptica, que considera un subsidio de 94 millones
+de dólares);
+o Fibra Óptica Austral (conexión de las tres regiones australes del país
+con 4.548 kilómetros de fibra óptica con un subsidio de 80 millones
+de dólares); y
+o Fibra Óptica Tarapacá (conexión de siete comunas de la región de
+Tarapacá con 839 kilómetros de fibra óptica con un subsidio de 7
+millones de dólares).
+ Nuestros Proyectos: El tercer eje es la creación de una Empresa Estatal de
+Telecomunicaciones, que posibilitará entregar servicios de conexión a
+Internet en aquellas zonas donde existe nula o escasa oferta y un subsidio
+a la demanda que permita el acceso a aquellas familias de escasos
+recursos. Respecto a la estructura de esta empresa, no se ha definido
+todavía.
+ Conectividad para todos y todas: “que apunta a entregar soluciones para
+las “zonas rojas” de las ciudades, a través de diferentes alternativas:
+Trabajo con municipios vulnerables; Mesas contra el robo de cables y
+vandalismo; Cooperativas de Internet y otras formas de organización
+ciudadana para el acceso a Internet; y Alfabetización digital”54. Este eje
+implica también acciones tendientes a reducir las brechas de usos y de
+apropiación, pues contempla estrategias de capacitación y desarrollo de
+habilidades y competencias digitales, bajo una lógica comunitaria o
+territorial. 

@@ -139,18 +139,16 @@ def get_df_prueba():
     df_prueba = df_prueba.rename(columns={"CODIGO_REGION": 'COD_REG_RBD'})
     return df_prueba
 
-def load_years():
-    archivos = {
-        2007: 'Dataset/TasaMatriculaConexiones/datos_2007.csv',
-        2017: 'Dataset/TasaMatriculaConexiones/datos_2017.csv',
-        2024: 'Dataset/TasaMatriculaConexiones/datos_2024.csv'
-    }
 
-    lista_dfs = []
-    for year, file in archivos.items():
-        df = pd.read_csv(file)
-        df['year'] = year
-        lista_dfs.append(df)
-
-    df_total = pd.concat(lista_dfs, ignore_index=True)
-    return df_total
+def get_df_pobreza():
+    df = pd.read_excel("Dataset\\PLANILLA_Estimaciones_comunales_tasa_pobreza_por_ingresos_multidimensional_2017.xlsx", skiprows=2)
+    print(df.columns.tolist())
+    df['% pobreza'] = df['Porcentaje de personas en situación de pobreza por ingresos 2017']
+    df_ordenado = df.sort_values('% pobreza')
+    comunas_menos_pobreza = df_ordenado.head(5).reset_index(drop=True)
+    comunas_mas_pobreza = df_ordenado.tail(5).sort_values('% pobreza', ascending=False).reset_index(drop=True)
+    print("Menor pobreza:")
+    print(comunas_menos_pobreza[['Nombre comuna', '% pobreza']])
+    print("\nMayor pobreza:")
+    print(comunas_mas_pobreza[['Nombre comuna', '% pobreza']])
+    return comunas_mas_pobreza, comunas_menos_pobreza

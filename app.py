@@ -3,13 +3,30 @@ from figuras.bbplot import make_bbplot
 from figuras.rankingbars import make_bchart
 from figuras.heatMapTasaMatricula import make_heatmapMatriculas
 from figuras.heatMapConexiones import make_heatmapConexiones
-from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, get_df_viviendas, get_df_prueba, set_year
+from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, get_df_viviendas, get_df_prueba, get_df_pobreza, set_year
 import pandas as pd
 
 
 fig_heatmapMatriculas = make_heatmapMatriculas()
 fig_heatmapConexiones = make_heatmapConexiones()
-
+regiones_dict = {
+    1: "Tarapacá",
+    2: "Antofagasta",
+    3: "Atacama",
+    4: "Coquimbo",
+    5: "Valparaíso",
+    6: "O'Higgins",
+    7: "Maule",
+    8: "Biobío",
+    9: "La Araucanía",
+    10: "Los Lagos",
+    11: "Aysén",
+    12: "Magallanes",
+    13: "Metropolitana",
+    14: "Los Ríos",
+    15: "Arica y Parinacota",
+    16: "Ñuble"
+}
 def get_df():
     df_pop = get_df_pop()
     df_rend = get_df_rendimiento()
@@ -21,6 +38,7 @@ def get_df():
     df_merged = df_merged.merge(df_vivi, on="COD_REG_RBD")
     df_merged = df_merged.merge(df_prueba, on="COD_REG_RBD")
     df_merged["CONEXIONES_POR_VIVIENDA"] = (df_merged["NUM_CONEXIONES_FIJAS"] / df_merged["VIVIENDAS"]) *100
+    df_merged["REGION_NOMBRE"] = df_merged["COD_REG_RBD"].map(regiones_dict)
     return df_merged
 
 
@@ -57,32 +75,40 @@ app.layout = html.Div([
         ], style={"display": "flex", "height": "70vh", "minHeight": "0"})
     ], style={"backgroundColor": "#ffffff", "padding": "1%", "borderRadius": "10px", "minHeight": "80vh", "margin": "1%"}),
     # fin de la fila
-    html.Div([
+    html.Div([ 
         html.Div([
-            dcc.Graph(figure=fig_heatmapMatriculas, id="heatmap1")
-        ], style={
-            "margin": "1%", 
-            "padding": "1%", 
-            "backgroundColor": "#ffffff", 
-            "borderRadius": "10px",
-            "flex": "1"
-        }),
+                dcc.Graph(figure=fig_heatmapMatriculas, id="heatmap1")
+            ], style={
+                "margin": "1%", 
+                "padding": "1%", 
+                "backgroundColor": "#ffffff", 
+                "borderRadius": "10px",
+                "flex": "1"
+            }),
 
-        html.Div([
-            dcc.Graph(figure=fig_heatmapConexiones, id="heatmap2")
+            html.Div([
+                dcc.Graph(figure=fig_heatmapConexiones, id="heatmap2")
+            ], style={
+                "margin": "1%", 
+                "padding": "1%", 
+                "backgroundColor": "#ffffff", 
+                "borderRadius": "10px",
+                "flex": "1"
+            })
         ], style={
-            "margin": "1%", 
-            "padding": "1%", 
-            "backgroundColor": "#ffffff", 
-            "borderRadius": "10px",
-            "flex": "1"
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-around",
+            "backgroundColor": "#e9e9e9"}),
+    html.Div([
+        html.Img(src="/assets/wordcloud.png", style={
+            "display": "block",
+            "marginLeft": "auto",
+            "marginRight": "auto",
+            "maxWidth": "100%",
+            "height": "100%"
         })
-    ], style={
-        "display": "flex",
-        "flexDirection": "row",
-        "justifyContent": "space-around",
-        "backgroundColor": "#e9e9e9"
-    })
+    ], style={"backgroundColor": "#ffffff", "padding": "1%", "borderRadius": "10px", "minHeight": "40vh", "margin": "1% auto", "maxWidth": "30%", "maxHeigth": "40%"})
 ], style={"backgroundColor": "#e9e9e9"})
 
 @callback(
