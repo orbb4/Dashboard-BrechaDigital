@@ -55,7 +55,7 @@ def make_heatmapMatriculas():
         text=hovertext,
         hoverinfo='text',
         colorscale='Reds',
-        colorbar=dict(title="Tasa de Matrícula (%)")
+        colorbar=dict(title="Tasa de Matrículas (%)")
     ))
 
     fig.update_layout(

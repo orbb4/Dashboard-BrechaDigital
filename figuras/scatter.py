@@ -13,8 +13,8 @@ def scatter_por_grupo(df, grupo):
         y="% pobreza",
         text="Nombre comuna",
         labels={
-            "% conexiones por vivienda": "% de conexiones a internet",
-            "% pobreza": "% de pobreza"
+            "% conexiones por vivienda": "Porecentaje de conexiones fijas a internet por vivienda",
+            "% pobreza": "Porcentaje de pobreza"
         },
         title=titulo
     )

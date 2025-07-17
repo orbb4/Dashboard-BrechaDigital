@@ -109,7 +109,10 @@ app.layout = html.Div([
     # fin de la fila
     html.Div([ 
         html.Div([
-                dcc.Graph(figure=fig_heatmapMatriculas, id="heatmap1")
+                dcc.Graph(figure=fig_heatmapMatriculas, id="heatmap1", style={
+                "width": "500px",        
+                "margin": "0 auto"
+            })
             ], style={
                 "margin": "1%", 
                 "padding": "1%", 
@@ -119,7 +122,10 @@ app.layout = html.Div([
             }),
 
             html.Div([
-                dcc.Graph(figure=fig_heatmapConexiones, id="heatmap2")
+                dcc.Graph(figure=fig_heatmapConexiones, id="heatmap2", style={
+                "width": "500px",        
+                "margin": "0 auto"
+            })
             ], style={
                 "margin": "1%", 
                 "padding": "1%", 
