@@ -41,7 +41,7 @@ def make_heatmapMatriculas():
                 f"<b>Región:</b> {region}<br>"
                 f"<b>Año:</b> {año}<br>"
                 f"<b>Tasa de matrícula:</b> {tasa_text}%<br>"
-                f"<b>Conexiones fijas a internet por habitante:</b> {conexiones_text}%<br>"
+                f"<b>Conexiones fijas a internet por vivienda:</b> {conexiones_text}%<br>"
                 f"<b>Total de estudiantes que rindieron la rdmisión:</b> {admisiones_text}<br>"
                 f"<b>Total de estudiantes matriculados:</b> {matriculas_text}"
             )

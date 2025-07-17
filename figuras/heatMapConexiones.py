@@ -41,7 +41,7 @@ def make_heatmapConexiones():
                 f"<b>Región:</b> {region}<br>"
                 f"<b>Año:</b> {año}<br>"
                 f"<b>Tasa de matrícula:</b> {tasa_text}%<br>"
-                f"<b>Conexiones fijas a internet por habitante:</b> {conexiones_text}%<br>"
+                f"<b>Conexiones fijas a internet por vivienda:</b> {conexiones_text}%<br>"
                 f"<b>Total de estudiantes que rindieron la admisión:</b> {admisiones_text}<br>"
                 f"<b>Total de estudiantes matriculados:</b> {matriculas_text}"
             )
@@ -63,7 +63,7 @@ def make_heatmapConexiones():
         height=600,
         #title="Conexiones fijas por habitante según región y año",
         title={
-        'text': "Conexiones fijas por habitante según región y año",
+        'text': "Conexiones fijas por vivienda según región y año",
         'font': dict(size=16),  
         'x': 0.5,
         'xanchor': 'center'

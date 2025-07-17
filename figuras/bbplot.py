@@ -14,6 +14,7 @@ def make_bbplot(df, nombre_prueba, color="M1", paes=True):
         hover_name="REGION_NOMBRE",
         size_max=65,
         size="POP",
+        title="Conectividad regional por vivienda (%) y puntajes promedio en prueba de admisión",
         color_discrete_sequence=[colors[color]],
         custom_data=["REGION_NOMBRE", "POP"]
     )
@@ -22,7 +23,7 @@ def make_bbplot(df, nombre_prueba, color="M1", paes=True):
     )
     fig.update_layout(
         dragmode='zoom',
-        xaxis=dict(title="Conexiones fijas a internet por habitante (%)", range=[0, 100], tickformat=".0f"),
+        xaxis=dict(title="Conexiones fijas a internet por vivienda (%)", range=[0, 100], tickformat=".0f"),
         yaxis=dict(title="Puntaje promedio", range=[1,yaxis_limit])
     )
     return fig
