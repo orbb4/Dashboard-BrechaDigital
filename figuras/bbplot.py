@@ -11,10 +11,14 @@ def make_bbplot(df, nombre_prueba, color="M1", paes=True):
         df,
         x="CONEXIONES_POR_VIVIENDA",
         y=nombre_prueba,
+        hover_name="REGION_NOMBRE",
         size_max=65,
-        hover_name="COD_REG_RBD",
         size="POP",
-        color_discrete_sequence=[colors[color]]
+        color_discrete_sequence=[colors[color]],
+        custom_data=["REGION_NOMBRE", "POP"]
+    )
+    fig.update_traces(
+        hovertemplate="<b>%{customdata[0]}</b><br>" + "Población total: %{customdata[1]}"
     )
     fig.update_layout(
         dragmode='zoom',

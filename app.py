@@ -3,7 +3,24 @@ from figuras.bbplot import make_bbplot
 from figuras.rankingbars import make_bchart
 from data_loader import get_df_pop, get_df_rendimiento, get_df_internet, get_df_viviendas, get_df_prueba, get_df_pobreza, set_year
 import pandas as pd
-
+regiones_dict = {
+    1: "Tarapacá",
+    2: "Antofagasta",
+    3: "Atacama",
+    4: "Coquimbo",
+    5: "Valparaíso",
+    6: "O'Higgins",
+    7: "Maule",
+    8: "Biobío",
+    9: "La Araucanía",
+    10: "Los Lagos",
+    11: "Aysén",
+    12: "Magallanes",
+    13: "Metropolitana",
+    14: "Los Ríos",
+    15: "Arica y Parinacota",
+    16: "Ñuble"
+}
 def get_df():
     df_pop = get_df_pop()
     df_rend = get_df_rendimiento()
@@ -15,6 +32,7 @@ def get_df():
     df_merged = df_merged.merge(df_vivi, on="COD_REG_RBD")
     df_merged = df_merged.merge(df_prueba, on="COD_REG_RBD")
     df_merged["CONEXIONES_POR_VIVIENDA"] = (df_merged["NUM_CONEXIONES_FIJAS"] / df_merged["VIVIENDAS"]) *100
+    df_merged["REGION_NOMBRE"] = df_merged["COD_REG_RBD"].map(regiones_dict)
     return df_merged
 
 
