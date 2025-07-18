@@ -1,6 +1,7 @@
 # Dashboard-BrechaDigital
 Ejecución:
 - El archivo principal es app.py. Tras ejecutarlo, abrir en el navegador la URL local mostrada en consola.
+  
 Contenidos en dataset:
 - CONEXIONES_INTERNET_FIJA.xlxs: contiene la cantidad de conexiones por región. Utilizar la hoja llamada "7.4.Co_RG"
 - pagos.csv: contiene gasto público en eduación. Falta agrupar totales de inversión segun "nombre_area" (cada nombre_area está asociado a una region)
